@@ -24,7 +24,7 @@ services:
       - ./custom_components:/config/custom_components:ro
   frigate:
     privileged: true
-    image: "ghcr.io/blakeblackshear/frigate:${FRIGATE_VERSION:-stable}"
+    image: "ghcr.io/blakeblackshear/frigate:${FRIGATE_VERSION:-stable}-rocm"
     restart: unless-stopped
     devices:
       - /dev/bus/usb:/dev/bus/usb
